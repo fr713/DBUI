@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Database</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            color: #333;
+        }
+
+        .sidebar {
+            background-color: #003366;
+            color: white;
+            width: 200px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #00509e;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background-color: #0073e6;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        .main-content h1 {
+            margin-top: 0;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .table th, .table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .table th {
+            background-color: #003366;
+            color: white;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            background-color: #00509e;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #0073e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <!-- Other sections -->
+        <h2>Department Information</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Department_ID</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Computer Science</td></tr>
+                <tr><td>2</td><td>Mathematics</td></tr>
+                <tr><td>3</td><td>Physics</td></tr>
+            </tbody>
+        </table>
+        
+        <h2>Class Information</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Class_ID</th>
+                    <th>Department_ID</th>
+                    <th>Course_Number</th>
+                    <th>Instructor_ID</th>
+                    <th>Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>101</td><td>1</td><td>101</td><td>1</td><td>3</td></tr>
+                <tr><td>102</td><td>1</td><td>201</td><td>2</td><td>4</td></tr>
+                <tr><td>201</td><td>2</td><td>101</td><td>3</td><td>3</td></tr>
+                <tr><td>202</td><td>2</td><td>201</td><td>4</td><td>4</td></tr>
+                <tr><td>301</td><td>3</td><td>101</td><td>5</td><td>3</td></tr>
+            </tbody>
+        </table>
+        
+
+        <h2>Detailed Faculty Information</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Employee_ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone_Number</th>
+                    <th>Department_ID</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                    <th>Race</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Dr. Alice Johnson</td><td>ajohnson@university.edu</td><td>1234567890</td><td>1</td><td>Female</td><td>1980-03-15</td><td>White</td></tr>
+                <tr><td>2</td><td>Dr. Bob Smith</td><td>bsmith@university.edu</td><td>2345678901</td><td>1</td><td>Male</td><td>1975-06-20</td><td>Black</td></tr>
+                <tr><td>3</td><td>Dr. Carol Lee</td><td>clee@university.edu</td><td>3456789012</td><td>2</td><td>Female</td><td>1985-09-12</td><td>Asian</td></tr>
+                <tr><td>4</td><td>Dr. David Brown</td><td>dbrown@university.edu</td><td>4567890123</td><td>2</td><td>Male</td><td>1980-01-23</td><td>Hispanic</td></tr>
+                <tr><td>5</td><td>Dr. Ellen Green</td><td>egreen@university.edu</td><td>5678901234</td><td>3</td><td>Female</td><td>1978-11-11</td><td>White</td></tr>
+                <tr><td>6</td><td>Dr. Frank White</td><td>fwhite@university.edu</td><td>6789012345</td><td>3</td><td>Male</td><td>1983-05-05</td><td>Black</td></tr>
+                <tr><td>7</td><td>Dr. Grace Black</td><td>gblack@university.edu</td><td>7890123456</td><td>1</td><td>Female</td><td>1990-08-19</td><td>Asian</td></tr>
+            </tbody>
+        </table>
+        <!-- New detailed student table -->
+        <h2>Detailed Student Information</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student_ID</th>
+                    <th>Name</th>
+                    <th>Phone_Number</th>
+                    <th>Email</th>
+                    <th>Classification</th>
+                    <th>Major</th>
+                    <th>Gender</th>
+                    <th>DOB</th>
+                    <th>Race</th>
+                    <th>Department_ID</th>
+                    <th>Graduate</th>
+                    <th>Veteran</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>John Doe</td><td>1234561111</td><td>jdoe1@student.edu</td><td>Freshman</td><td>Computer Science</td><td>Male</td><td>2005-07-15</td><td>White</td><td>1</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>2</td><td>Jane Smith</td><td>1234562222</td><td>jsmith1@student.edu</td><td>Sophomore</td><td>Mathematics</td><td>Female</td><td>2004-03-12</td><td>Black</td><td>2</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>3</td><td>Mike Johnson</td><td>1234563333</td><td>mjohnson1@student.edu</td><td>Junior</td><td>Physics</td><td>Male</td><td>2003-11-22</td><td>Asian</td><td>3</td><td>FALSE</td><td>TRUE</td></tr>
+                <tr><td>4</td><td>Sarah Brown</td><td>1234564444</td><td>sbrown1@student.edu</td><td>Senior</td><td>Computer Science</td><td>Female</td><td>2002-05-10</td><td>White</td><td>1</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>5</td><td>Chris Lee</td><td>1234565555</td><td>clee1@student.edu</td><td>Freshman</td><td>Physics</td><td>Male</td><td>2005-10-30</td><td>Hispanic</td><td>3</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>6</td><td>Emma Green</td><td>1234566666</td><td>egreen1@student.edu</td><td>Junior</td><td>Mathematics</td><td>Female</td><td>2003-09-18</td><td>Black</td><td>2</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>7</td><td>Tom White</td><td>1234567777</td><td>twhite1@student.edu</td><td>Senior</td><td>Computer Science</td><td>Male</td><td>2002-07-07</td><td>White</td><td>1</td><td>TRUE</td><td>FALSE</td></tr>
+                <tr><td>8</td><td>Lisa Black</td><td>1234568888</td><td>lblack1@student.edu</td><td>Sophomore</td><td>Mathematics</td><td>Female</td><td>2004-02-25</td><td>Asian</td><td>2</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>9</td><td>David Kim</td><td>1234569999</td><td>dkim1@student.edu</td><td>Junior</td><td>Physics</td><td>Male</td><td>2003-12-15</td><td>Asian</td><td>3</td><td>FALSE</td><td>TRUE</td></tr>
+                <tr><td>10</td><td>Sophia Brown</td><td>1234560000</td><td>sbrown2@student.edu</td><td>Freshman</td><td>Computer Science</td><td>Female</td><td>2005-01-08</td><td>White</td><td>1</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>11</td><td>James Lee</td><td>2345671111</td><td>jlee1@student.edu</td><td>Sophomore</td><td>Mathematics</td><td>Male</td><td>2004-06-14</td><td>Hispanic</td><td>2</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>12</td><td>Emily Green</td><td>2345672222</td><td>egreen2@student.edu</td><td>Senior</td><td>Physics</td><td>Female</td><td>2002-09-22</td><td>Black</td><td>3</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>13</td><td>Robert Black</td><td>2345673333</td><td>rblack1@student.edu</td><td>Junior</td><td>Computer Science</td><td>Male</td><td>2003-11-02</td><td>Asian</td><td>1</td><td>FALSE</td><td>TRUE</td></tr>
+                <tr><td>14</td><td>Chloe White</td><td>2345674444</td><td>cwhite1@student.edu</td><td>Freshman</td><td>Physics</td><td>Female</td><td>2005-03-14</td><td>White</td><td>3</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>15</td><td>Daniel Kim</td><td>2345675555</td><td>dkim2@student.edu</td><td>Junior</td><td>Mathematics</td><td>Male</td><td>2003-07-10</td><td>Asian</td><td>2</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>16</td><td>Grace Brown</td><td>2345676666</td><td>gbrown1@student.edu</td><td>Sophomore</td><td>Computer Science</td><td>Female</td><td>2004-10-05</td><td>Hispanic</td><td>1</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>17</td><td>Andrew White</td><td>2345677777</td><td>awhite1@student.edu</td><td>Senior</td><td>Physics</td><td>Male</td><td>2002-12-11</td><td>White</td><td>3</td><td>TRUE</td><td>FALSE</td></tr>
+                <tr><td>18</td><td>Olivia Lee</td><td>2345678888</td><td>olee1@student.edu</td><td>Junior</td><td>Mathematics</td><td>Female</td><td>2003-06-30</td><td>Black</td><td>2</td><td>FALSE</td><td>FALSE</td></tr>
+                <tr><td>19</td><td>Benjamin Green</td><td>2345679999</td><td>bgreen1@student.edu</td><td>Sophomore</td><td>Physics</td><td>Male</td><td>2004-08-20</td><td>Hispanic</td><td>3</td><td>FALSE</td><td>TRUE</td></tr>
+            </tbody>
+        </table>
+        <h2>Student Class Information</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student_Class_ID</th>
+                    <th>Class_ID</th>
+                    <th>Student_ID</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>101</td><td>1</td><td>85</td></tr>
+                <tr><td>2</td><td>102</td><td>1</td><td>88</td></tr>
+                <tr><td>3</td><td>201</td><td>1</td><td>90</td></tr>
+                <tr><td>4</td><td>101</td><td>2</td><td>78</td></tr>
+                <tr><td>5</td><td>202</td><td>2</td><td>80</td></tr>
+                <tr><td>6</td><td>102</td><td>3</td><td>92</td></tr>
+                <tr><td>7</td><td>301</td><td>3</td><td>87</td></tr>
+                <tr><td>8</td><td>201</td><td>4</td><td>94</td></tr>
+                <tr><td>9</td><td>202</td><td>4</td><td>85</td></tr>
+                <tr><td>10</td><td>101</td><td>4</td><td>89</td></tr>
+                <tr><td>11</td><td>301</td><td>5</td><td>77</td></tr>
+                <tr><td>12</td><td>102</td><td>5</td><td>79</td></tr>
+                <tr><td>13</td><td>101</td><td>6</td><td>91</td></tr>
+                <tr><td>14</td><td>201</td><td>6</td><td>84</td></tr>
+                <tr><td>15</td><td>301</td><td>6</td><td>88</td></tr>
+                <tr><td>16</td><td>201</td><td>7</td><td>90</td></tr>
+                <tr><td>17</td><td>202</td><td>7</td><td>92</td></tr>
+                <tr><td>18</td><td>101</td><td>8</td><td>83</td></tr>
+                <tr><td>19</td><td>102</td><td>8</td><td>87</td></tr>
+                <tr><td>20</td><td>301</td><td>8</td><td>85</td></tr>
+                <tr><td>21</td><td>102</td><td>9</td><td>93</td></tr>
+                <tr><td>22</td><td>202</td><td>9</td><td>91</td></tr>
+                <tr><td>23</td><td>201</td><td>10</td><td>86</td></tr>
+                <tr><td>24</td><td>301</td><td>10</td><td>78</td></tr>
+                <tr><td>25</td><td>101</td><td>11</td><td>88</td></tr>
+                <tr><td>26</td><td>202</td><td>11</td><td>84</td></tr>
+                <tr><td>27</td><td>102</td><td>12</td><td>90</td></tr>
+                <tr><td>28</td><td>201</td><td>12</td><td>82</td></tr>
+                <tr><td>29</td><td>301</td><td>13</td><td>87</td></tr>
+                <tr><td>30</td><td>101</td><td>13</td><td>89</td></tr>
+                <tr><td>31</td><td>202</td><td>14</td><td>92</td></tr>
+                <tr><td>32</td><td>201</td><td>14</td><td>85</td></tr>
+                <tr><td>33</td><td>102</td><td>15</td><td>90</td></tr>
+                <tr><td>34</td><td>101</td><td>15</td><td>94</td></tr>
+                <tr><td>35</td><td>301</td><td>16</td><td>77</td></tr>
+                <tr><td>36</td><td>202</td><td>16</td><td>80</td></tr>
+                <tr><td>37</td><td>101</td><td>17</td><td>92</td></tr>
+                <tr><td>38</td><td>102</td><td>17</td><td>85</td></tr>
+                <tr><td>39</td><td>201</td><td>17</td><td>89</td></tr>
+                <tr><td>40</td><td>102</td><td>18</td><td>91</td></tr>
+                <tr><td>41</td><td>301</td><td>18</td><td>84</td></tr>
+                <tr><td>42</td><td>101</td><td>19</td><td>87</td></tr>
+                <tr><td>43</td><td>201</td><td>19</td><td>86</td></tr>
+                <tr><td>44</td><td>301</td><td>20</td><td>82</td></tr>
+                <tr><td>45</td><td>202</td><td>20</td><td>90</td></tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
