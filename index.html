@@ -106,7 +106,14 @@
                 <tr><td>3</td><td>Physics</td></tr>
             </tbody>
         </table>
-        
+        <form action="/add-department" method="post">
+            <h3>Add Department</h3>
+            <label for="department-id">Department ID:</label>
+            <input type="text" id="department-id" name="department_id" required><br>
+            <label for="department-name">Department Name:</label>
+            <input type="text" id="department-name" name="name" required><br>
+            <button type="submit">Add Department</button>
+        </form>
         <h2>Class Information</h2>
         <table class="table">
             <thead>
@@ -126,8 +133,20 @@
                 <tr><td>301</td><td>3</td><td>101</td><td>5</td><td>3</td></tr>
             </tbody>
         </table>
-        
-
+        <form action="/add-class" method="post">
+            <h3>Add Class</h3>
+            <label for="class-id">Class ID:</label>
+            <input type="text" id="class-id" name="class_id" required><br>
+            <label for="department-id">Department ID:</label>
+            <input type="text" id="department-id" name="department_id" required><br>
+            <label for="course-number">Course Number:</label>
+            <input type="text" id="course-number" name="course_number" required><br>
+            <label for="instructor-id">Instructor ID:</label>
+            <input type="text" id="instructor-id" name="instructor_id" required><br>
+            <label for="hours">Hours:</label>
+            <input type="text" id="hours" name="hours" required><br>
+            <button type="submit">Add Class</button>
+        </form>
         <h2>Detailed Faculty Information</h2>
         <table class="table">
             <thead>
